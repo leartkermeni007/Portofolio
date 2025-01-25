@@ -59,49 +59,46 @@ jQuery(document).ready(function($){
 
 
 
-// Add active class on another page linked
-// ==========================================
-// $(window).on('load',function () {
-//     var current = location.pathname;
-//     console.log(current);
-//     $('#navbarSupportedContent ul li a').each(function(){
-//         var $this = $(this);
-//         // if the current path is like this link, make it active
-//         if($this.attr('href').indexOf(current) !== -1){
-//             $this.parent().addClass('active');
-//             $this.parents('.menu-submenu').addClass('show-dropdown');
-//             $this.parents('.menu-submenu').parent().addClass('active');
-//         }else{
-//             $this.parent().removeClass('active');
-//         }
-//     })
-// });
-// ------- Osmo [https://osmo.supply/] ------- //
+let currentSection = 0;
+const sections = document.querySelectorAll("section"); // Select all sections
+let isScrolling = false; // To prevent overlapping scroll events
 
-// let currentSection = 0;
-// const sections = document.querySelectorAll('section'); // Select all sections
+// Function to scroll to the next or previous section with smooth scroll
+function scrollToSection(index) {
+  if (index >= 0 && index < sections.length) {
+    sections[index].scrollIntoView({
+      behavior: "smooth", // Smooth scrolling
+      block: "start", // Align section to the top
+    });
 
-// // Function to scroll to the next or previous section with smooth scroll
-// function scrollToSection(index) {
-//   if (index >= 0 && index < sections.length) {
-//     sections[index].scrollIntoView({
-//       behavior: 'smooth', // Smooth scrolling
-//       block: 'start',     // Align section to the top
-//     });
-//   }
-// }
+    // Set a timeout to prevent multiple quick scroll events
+    isScrolling = true;
+    setTimeout(() => {
+      isScrolling = false;
+    }, 800); // Adjust delay for smooth transition
+  }
+}
 
-// // Detect scroll wheel events
-// window.addEventListener('wheel', (event) => {
-//   if (event.deltaY > 0) { // Scroll down
-//     if (currentSection < sections.length - 1) {
-//       currentSection++; // Move to the next section
-//       scrollToSection(currentSection);
-//     }
-//   } else { // Scroll up
-//     if (currentSection > 0) {
-//       currentSection--; // Move to the previous section
-//       scrollToSection(currentSection);
-//     }
-//   }
-// });
+// Detect scroll wheel events
+window.addEventListener("wheel", (event) => {
+  // Check if the screen width is greater than or equal to 1000px
+  if (window.innerWidth >= 1000) {
+    if (!isScrolling) {
+      if (event.deltaY > 0) {
+        // Scroll down
+        if (currentSection < sections.length - 1) {
+          currentSection++; // Move to the next section
+          scrollToSection(currentSection);
+        }
+      } else {
+        // Scroll up
+        if (currentSection > 0) {
+          currentSection--; // Move to the previous section
+          scrollToSection(currentSection);
+        }
+      }
+      // Prevent default scroll behavior
+      event.preventDefault();
+    }
+  }
+});
