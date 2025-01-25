@@ -522,7 +522,7 @@ font-size: 1rem;
 text-transform: uppercase;
 font-weight:700;
 }
-@media (min-width: 2000px) {
+@media (min-width: 1900px) {
 	#aboutus{
 		padding: 80px;
     text-align: center;
