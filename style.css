@@ -374,7 +374,6 @@ padding: 20px 20px 20px 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
 }
-
 .pfoto:hover {
   transform: scale(1.05); /* Slight zoom effect on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
