@@ -360,14 +360,14 @@ margin: 0;
 }
 .rightt{
 
-  float: right;
-  width: 72%;
+  float: left;
+  width: 100%;
 padding: 20px 20px 20px 20px;
   height: 80vh;
   text-align: right;
 }
 .pfoto {
-  height: 350px;
+  height: 450px;
   width: auto;
   border-radius: 30px;
   margin: 5px;
