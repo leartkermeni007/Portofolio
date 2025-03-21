@@ -367,8 +367,8 @@ padding: 20px 20px 20px 20px;
   text-align: right;
 }
 .pfoto {
-  height: 450px;
-  width: auto;
+  height: auto;
+  width: calc(20% - 15px);
   border-radius: 30px;
   margin: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
