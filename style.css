@@ -171,7 +171,7 @@ background: #282828;
   justify-content: center;
   align-items: center;
   width: 100%;
-  display: block;
+  display: inline;
   height: auto;
   pointer-events: auto;
   margin-top: 0;
@@ -214,14 +214,9 @@ background: #282828;
     width: calc(40% - 30px);
     height: auto;
     float: left;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.section2:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
-}
+
 #txt{
   color:#282828;
   font-weight: 800;
@@ -241,14 +236,10 @@ background: #282828;
   width: calc(40% - 30px);
   height: auto;
   float: left;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
-.section3:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
-}
+
 .skill {
       width: calc(25% - 40px);
   height: 5rem;
@@ -259,14 +250,9 @@ background: #282828;
   margin-bottom: 10px;
   background-color: #fff;
   border-radius: 8px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-.skill:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
-}
+
 
 .icon {
   width: 35px;
@@ -274,12 +260,10 @@ background: #282828;
   display: inline-block; 
   margin-bottom: 5px;
   margin-right: 5px;
-  transition: transform 0.3s ease, filter 0.3s ease; 
 }
 
 .icon:hover {
   transform: scale(1.2); 
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2)); 
 }
 .pg{
  display: inline;
@@ -321,17 +305,12 @@ h1{
   margin-left: 30px;
   display: inline-block;
   float: left;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: calc(80% - 30px);
   height: auto;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .section4:hover {
   transform: translateY(-5px); /* Lift the section on hover */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
 .leftt{
@@ -372,12 +351,9 @@ padding: 20px 20px 20px 20px;
   width: calc(20% - 15px);
   border-radius: 30px;
   margin: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
 }
 .pfoto:hover {
   transform: scale(1.05); /* Slight zoom effect on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
 #contactus{
   padding:100px 50px 50px 50px;
@@ -400,7 +376,6 @@ padding: 20px 20px 20px 20px;
 .contact{
   padding:30px ;
   background:#fff ;
-  box-shadow:0 5px 35px rgba(0,0,0,0.15);
   border-radius: 30px;
 }
 .box{
