@@ -250,7 +250,7 @@ background: #282828;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
 }
 .skill {
-  width: 255px;
+      width: calc(25% - 40px);
   height: 5rem;
   float: left;
   padding: 10px;
