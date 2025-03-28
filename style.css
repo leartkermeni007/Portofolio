@@ -299,7 +299,7 @@ background-image: url("1.png");
     padding: 20px;
     width: 20%;
     height: 100%;
-    display: inline-block;
+    display: none;
     float: left;
 
 }
@@ -312,7 +312,7 @@ background-image: url("1.png");
     padding: 20px;
     margin-left: 30px;
     display: inline-block;
-    width: calc(40% - 30px);
+    width: calc(60% - 30px);
     height: auto;
     float: left;
 }
@@ -406,7 +406,7 @@ h1{
   margin-left: 30px;
   display: inline-block;
   float: left;
-  width: calc(80% - 30px);
+  width: calc(100% - 30px);
   height: auto;
 }
 
