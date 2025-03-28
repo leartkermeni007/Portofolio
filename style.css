@@ -650,7 +650,7 @@ font-weight:700;
 
 @media (max-width: 991px) {
   #home{
-	 background-image: url("2.png");
+	 background-color: #282828;
     padding: 0;
     padding-top: 30px;
     text-align: center;
