@@ -114,12 +114,16 @@ i {
   left: -25px;
 }
 #home{
-	padding:50px;
 	position:relative;
-background: #282828;
+background-image: url("1.png");
+    background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
 	width:100%;
 	height:100vh;
-	text-align:right;
+	text-align:center;
+	align-content:center;
+	align-items:center;
 }
 .leartft{
   float: left;
@@ -141,7 +145,113 @@ background: #282828;
     text-align:center;
     height:100vh;
 }
+.title{
+	margin:0;
+}
+.button-85 {
+	margin-top:50px;
+	   font-weight: 500;
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  font-size:30px;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.bottom{
+	position:absolute;
+	bottom:80px;
+	width:100%;
+    display: block;
+    height: auto;
+}
+.gl{
+	padding:0px;
+	margin:0px;
+	position:absolute;
+	bottom:0;
+    width: 100%;
+    display: block;
+    height: auto;
+    pointer-events: auto;
+     font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    color:white;
+}
+.gd{
+	  justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: block;
+    height: auto;
+    pointer-events: auto;
+     font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    position: relative;
+    color:white;
+}
 .emri,.mbiemri{
     justify-content: center;
     align-items: center;
@@ -149,9 +259,8 @@ background: #282828;
     display: block;
     height: auto;
     pointer-events: auto;
-    padding: 50px;
      font-family: 'Montserrat', sans-serif;
-    font-size: 200px;
+    font-size: 100px;
     font-weight: 800;
     line-height: 1.1;
     position: relative;
@@ -162,11 +271,6 @@ background: #282828;
   transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease; /* Smooth transitions */
 }
 
-.emri:hover, .mbiemri:hover {
-  transform: translateY(-5px); /* Lift the text on hover */
-  color: #f1f1f1; /* Lighter color on hover */
-  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover for emphasis */
-}
 .aboutme {
   justify-content: center;
   align-items: center;
@@ -598,7 +702,10 @@ padding: 0;
     text-align: center;
   }
   .emri,.mbiemri{
-    font-size: 60px;
+    font-size: 40px;
+}
+.gd{
+	font-size: 20px;
 }
 #porto{
   padding: 50px 10px 50px 10px;

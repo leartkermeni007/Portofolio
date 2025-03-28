@@ -43,13 +43,33 @@
             </ul>
         </div>
     </nav>    -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function goToNextSection() {
+      // Scroll by 100vh (viewport height)
+      window.scrollBy({
+        top: window.innerHeight + 20,  // Scroll by 100vh (viewport height)
+        behavior: 'smooth',
+      });
+    }
+
+    const startButton = document.querySelector(".button-85");
+    if (startButton) {
+      startButton.addEventListener("click", goToNextSection);
+    }
+  });
+</script>
+
 	<div id="home">
-    <div class="leart">
-    <img src="leartb.png"  class="leartft" ></img>
-  </div>
 	<div class="title">
-            <h2 class="emri">LEART</h2> </div>
-			<h2 class="mbiemri">KERMENI</h2>
+            <h2 class="emri">MY PORTOFOLIO</h2>
+				<h4 class="gd">Graphic Desinger & Website developer</h4>
+			</div>
+				<button class="button-85" role="button"> START</a></button>
+			<div class="bottom">
+					<h4 class="gl">Leart Kermeni</h4>
+				<h4 class="gl">born in 2007</h4>
+				</div>
      </div>
 	
 <section id="section2">
