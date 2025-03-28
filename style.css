@@ -116,9 +116,6 @@ i {
 #home{
 	position:relative;
 background-image: url("1.png");
-    background-attachment: fixed;
-   background-repeat: no-repeat;
-   background-size: cover;
 	width:100%;
 	height:100vh;
 	text-align:center;
