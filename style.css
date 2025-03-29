@@ -66,6 +66,9 @@ i {
   font-weight: 900;
   transition: 0.5s;
 }
+.progress{
+	border-radius:50px;
+}
 #navbarSupportedContent .active > a:not(:only-child):after {
   transform: rotate(90deg);
 }
