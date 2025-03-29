@@ -611,8 +611,6 @@ font-weight:700;
 }
 @media (min-width: 1900px) {
 	#aboutus{
-    background-image: url("qabane.png");
-    background-repeat: no-repeat;
 		padding: 80px;
     text-align: center;
     height: 100vh;
