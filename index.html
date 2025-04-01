@@ -207,7 +207,7 @@ Feel free to connect—I’m always open to collaborating or discussing cool tec
             <div class="box">
               <div class="contact form">
                 <h3>Send a message</h3>
-                <form class='' action="send.php" method="post">
+                <form id="contact-form"  method="post">
                   <div class="formbox">
                     <div class="row50">
                       <div class="inputbox">
@@ -246,6 +246,7 @@ Feel free to connect—I’m always open to collaborating or discussing cool tec
                   </div>
                 </form>
               </div>
+
           
               <div class="contact info">
               <h3>Contact information</h3>
@@ -278,6 +279,25 @@ Feel free to connect—I’m always open to collaborating or discussing cool tec
 
 	
 	</div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("upCu30MNExU0ZkT2l"); // Replace with your actual EmailJS user ID
+
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        emailjs.sendForm("service_6zw8b8a", "template_5q5i96g", this)
+            .then(function () {
+                alert("Email sent successfully!");
+            })
+            .catch(function (error) {
+                alert("Failed to send email: " + JSON.stringify(error));
+            });
+    });
+});
+
+  </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
       <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
