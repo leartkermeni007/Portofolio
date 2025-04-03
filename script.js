@@ -36,5 +36,5 @@ butter.init({
 });
 
 butter.init({
-  wrapperDamper: 0.04
+  wrapperDamper: 0.02
 });
