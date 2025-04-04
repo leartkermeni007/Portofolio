@@ -27,14 +27,3 @@
       startButton.addEventListener("click", goToNextSection);
     }
   });
-  butter.init({
-  wrapperId: 'butter'
-});
-
-butter.init({
-  cancelOnTouch: true
-});
-
-butter.init({
-  wrapperDamper: 0.02
-});
