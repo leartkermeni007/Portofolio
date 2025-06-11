@@ -27,3 +27,19 @@
       startButton.addEventListener("click", goToNextSection);
     }
   });
+
+  function calculateAge(birthDate) {
+    const today = new Date();
+    const birth = new Date(birthDate);
+    let age = today.getFullYear() - birth.getFullYear();
+    const m = today.getMonth() - birth.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
+      age--;
+    }
+    return age;
+  }
+
+  const birthDate = '2007-04-11'; // yyyy-mm-dd format
+  document.getElementById('age').textContent = calculateAge(birthDate);
+
+

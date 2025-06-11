@@ -56,7 +56,33 @@
 				<h4 class="gl">born in 2007</h4>
 				</div>
      </div>
-	
+     <div style="position: fixed; top: 10px; right: 10px; z-index: 9999;">
+      <select 
+        style="
+          background-color: transparent; 
+          border: none; 
+          color: white; 
+          padding: 5px 10px; 
+          font-size: 14px; 
+          -webkit-appearance: none; 
+          -moz-appearance: none; 
+          appearance: none;
+          cursor: pointer;
+        " 
+        onchange="translatePage(this.value)" 
+        class="form-control form-control-sm"
+      >
+        <option value="" style="color: black;">🌐 Select Language</option>
+        <option value="en" style="color: black;">English</option>
+        <option value="es" style="color: black;">Spanish</option>
+        <option value="fr" style="color: black;">French</option>
+        <option value="de" style="color: black;">German</option>
+        <option value="sq" style="color: black;">Albanian</option>
+        <option value="it" style="color: black;">Italian</option>
+      </select>
+    </div>
+    
+
 <section id="section2">
     <div id="aboutus">
             <div class="title">
@@ -67,7 +93,7 @@
             <div class="section2">
                 <h2 id="txt">Hello I am Leart Kermeni</h2>
                 <a id="dsc">
-			Hi, I'm a 18-year-old tech enthusiast from Kosovo with a passion for programming, design, and all things computer science. I’ve developed skills in both frontend and backend development, and I’m proud to be certified in these fields. Whether it’s creating sleek user interfaces or building robust backend systems, I love diving into projects that challenge my creativity and problem-solving abilities.
+			Hi, I'm a <span id="age"></span> year old tech enthusiast from Kosovo with a passion for programming, design, and all things computer science. I’ve developed skills in both frontend and backend development, and I’m proud to be certified in these fields. Whether it’s creating sleek user interfaces or building robust backend systems, I love diving into projects that challenge my creativity and problem-solving abilities.
 In addition to programming, I enjoy exploring design principles and finding ways to combine functionality with aesthetics. I’m always on the lookout for opportunities to grow, learn, and turn ideas into reality.
 Feel free to connect—I’m always open to collaborating or discussing cool tech projects!
 		</a>
@@ -75,7 +101,7 @@ Feel free to connect—I’m always open to collaborating or discussing cool tec
             <div class="section3">
                 <h2>Education </h2> 
                 <h1 >Primary School - </h1> <a class="link" href="https://www.facebook.com/shfmuramebllaca">SHFMU Ramë Bllaca</a> <t1>· finished</t1> <br>
-                <h1 >High School - </h1> <a class="link" href="https://www.facebook.com/iaapsuhareke">IAAP Skender Luarasi</a> <t2>· Now</t2> <br>
+                <h1 >High School - </h1> <a class="link" href="https://www.facebook.com/iaapsuhareke">IAAP Skender Luarasi</a> <t1>· finished</t1> <br>
                 <h2 >Course </h2>
                 <h1 >Frontend/Backend - </h1> <a class="link"">Shkolla Digjitale Prizren</a> <t1>· certified</t1>  
                 <h2 >Works</h2>
@@ -293,7 +319,67 @@ butter.init({
   wrapperDamper: 0.02
 });
 	</script>
-	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<!-- Google Translate Element -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function translatePage(lang) {
+    const combo = document.querySelector(".goog-te-combo");
+    if (combo) {
+      combo.value = lang;
+      combo.dispatchEvent(new Event("change"));
+    } else {
+      console.warn("Google Translate not ready yet.");
+    }
+  }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	
+<Style>
+  /* Fshih barin e sipërm të përkthimit të Google */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+/* Fshih tooltip-in e Google Translate */
+#goog-gt-tt, .goog-te-balloon-frame {
+  display: none !important;
+}
+
+/* Fshih highlight-in në tekstet e përkthyera */
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* Shmang hapësirat në body kur ngarkohet baneri */
+body {
+  top: 0px !important;
+  position: static !important;
+}
+#google_translate_element {
+  display: none !important;
+}
+body {
+    top: 0px !important;
+    position: static !important;
+}
+.goog-te-banner-frame.skiptranslate,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+body > .skiptranslate {
+    display: none !important;
+}
+
+
+</Style>
 </body>
 </html>
